@@ -1,4 +1,4 @@
-#include "Matrix.hpp"
+#include "../includes/Matrix.hpp"
 
 int main()
 {
@@ -11,6 +11,6 @@ int main()
 	Matrix<int> b(bs);
 	a.showMatrix();
 	cout << endl;
-	a.transpose();
+	a = a.transpose();
 	a.showMatrix();
 }

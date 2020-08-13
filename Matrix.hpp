@@ -232,25 +232,29 @@ Matrix<T> Matrix<T>::operator-(const T& val)
 template<typename T>
 Matrix<T> Matrix<T>::operator*(const T& val)
 {
+	Matrix<T> result(*this);
 	for (size_t i = 0; i < this->nrow; i++)
 	{
 		for (size_t j = 0; j < this->ncol; j++)
 		{
-			this->matrix.at(i).at(j) *= val;
+			matrix.matrix.at(i).at(j) *= val;
 		}
 	}
+	return (result);
 }
 
 template<typename T>
 Matrix<T> Matrix<T>::operator/(const T& val)
 {
+	Matrix<T> result(*this);
 	for (size_t i = 0; i < this->nrow; i++)
 	{
 		for (size_t j = 0; j < this->ncol; j++)
 		{
-			this->matrix.at(i).at(j) /= val;
+			result.matrix.at(i).at(j) /= val;
 		}
 	}
+	return (result);
 }
 
 template<typename T>

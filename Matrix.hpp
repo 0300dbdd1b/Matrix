@@ -44,9 +44,13 @@ class Matrix
 	Matrix<T>&	operator*=(const T& val);
 	Matrix<T>&	operator/=(const T& val);
 
+	vector<T>&	at(size_t idnex);
+
 	void showMatrix();
 
 };
+
+
 /* --- Constructors --- */
 
 template<typename T>
@@ -355,6 +359,12 @@ Matrix<T> sqrt(const Matrix<T> &matrix)
 		}
 	}
 	return (result);
+}
+
+template<typename T>
+vector<T> &Matrix<T>::at(size_t index)
+{
+	return (this->matrix.at(index));
 }
 
 /* --- Show Functions --- */
